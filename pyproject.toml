@@ -1,0 +1,14 @@
+[project]
+name = "simple-base62"
+version = "0.1.0"
+description = "Converts non-negative integers to Base62 strings for use as compact, URL-safe identifiers."
+requires-python = ">=3.10"
+dependencies = []
+readme = "README.md"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
