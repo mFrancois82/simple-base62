@@ -29,3 +29,10 @@ already UUID-sized bytes, use something else.
   empty string is treated as invalid input to `decode` and raises `ValueError`.
 - `encode(-1)` raises `ValueError`; there is no sign representation.
 - Any character outside `CHARSET` passed to `decode` raises `ValueError`.
+
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+
