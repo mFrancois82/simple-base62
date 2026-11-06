@@ -1,6 +1,6 @@
 [project]
 name = "simple-base62"
-version = "0.1.0"
+version = "0.1.1"
 description = "Converts non-negative integers to Base62 strings for use as compact, URL-safe identifiers."
 requires-python = ">=3.10"
 dependencies = []
